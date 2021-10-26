@@ -71,7 +71,8 @@ These packages ensure that we are able to use networking in the final installati
 ### 7) Localization settings- Timezone
 
 Found timezone by: `timedatectl list-timezones |grep Central`
-Set timezone by: `timedatectl set-timezone US/Central`
+
+timezone by: `timedatectl set-timezone US/Central`
 
 ### 8) Installing a Boot loader
 For a bootloader, I choose Grub
@@ -84,7 +85,7 @@ grub-mkconfig -o /boot/grub/grub.cfg # Setup Grub configuration to detect operat
 This set of commands installs grub, places it as part of the final installation drive, and then configures it to detect the Arch Operating system we are creating. Now, we are capable of actually rebooting the device and starting Arch linux without the live installation medium.
 
 ### 9) configuring a network
-In order to have internet access, I had to configure the network control module for Arch. Network Control uses profiles stored in `etc/netctl` to configure the network operations of the system. The profile I created for my virtual machine is as follows:
+In order to have internet access, I had to configure the network control module for Arch. Network Control uses profiles stored in `/etc/netctl` to configure the network operations of the system. The profile I created for my virtual machine is as follows:
 
 /etc/netctl/mainNet
 ```
@@ -349,3 +350,13 @@ Aliases are appended to the end of the /etc/bash.bashrc file, so that all Bash s
 
 I added an Alias for the Class Gateway SSH command:
 `alias gateway = "ssh -p53997 azl0502@129.244.245.21"`
+
+I also added a few utitlty aliases.
+
+This one creates a path command, to display the path in readable format: `alias path='echo -e ${PATH//:/\\n}'`
+
+This one prints a date time in readable format for the user: `alias now='date +"%T"'`
+
+This one prints the current time of the system: `alias nowtime=now`
+
+This one prints just the current data of the system: `alias nowdate='date +"%d-%m-%Y"'`
