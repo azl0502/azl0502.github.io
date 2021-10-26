@@ -68,8 +68,8 @@ pacman -S dhcpcd
 
 These packages ensure that we are able to use networking in the final installation, once the installation medium is unavailable
 
-### 7) Localization settings
-- Timezone
+### 7) Localization settings- Timezone
+
 Found timezone by: `timedatectl list-timezones |grep Central`
 Set timezone by: `timedatectl set-timezone US/Central`
 
@@ -107,8 +107,8 @@ sudo reboot
 ```
 
 
-### 11) Create a user account for yourself, sal, and codi with sudo permissions. The user names shall be "sal" and "codi" and the password shall be "GraceHopper1906" and be set to be changed after login.
-Add a user, change it's password, then cause it to expire:
+### 11) User Setup
+I wanted to create 3 accounts: austin, sal, and codi, each with the password "GraceHopper1906". On login, each user is to change their password. This is done using the following code template, where username is replaced with the username we want to create:
 
 ```
 useradd -m username
@@ -116,20 +116,28 @@ passwd username
 passwd --expire username
 ```
 
+Next, I wanted to give each one sudo powers. To do this, I edited the `/etc/sudoers` group, allowing the group `wheel` to run sudo. After this, I simply added the users to the group `wheel`, using the following:
+```
+usermod -aG wheel username
+```
+
 ### 12)  Install a different shell other than bash, such as zsh or fish.
 
+I installed zsh using pacman:
 `pacman -S zsh`
 
 ### 13)  Install ssh and use it to ssh into the class gateway.
 
-ssh was already installed
+I discovered that ssh was already installed, and so I simply found the command structure for connecting to the class gateway:
 
 Connecting to the Gateway:
 `ssh -p53997 azl0502@129.244.245.21`
 
 ### 14)  Add color coding to the terminal (like you see in the archiso during installation).
 
-/etc/bash.bashrc:
+In order to create a color coding setup, we have to edit two files:
+
+/etc/bash.bashrc
 ```
 # /etc/bash.bashrc
 #
@@ -241,7 +249,9 @@ unset safe_term match_lhs
 [ -r /usr/share/doc/pkgfile/command-not-found.bash ] && . /usr/share/doc/pkgfile/command-not-found.bash
 ```
 
-/etc/DIR_COLORS:
+and
+
+/etc/DIR_COLORS
 ```
 # Configuration file for the color ls utility
 # This file goes in the /etc directory, and must be world readable.
@@ -333,6 +343,9 @@ EXEC 01;32
 .tif 01;35	
 ```
 
-### 15)  Add a few aliases to .bashrc or .zshrc.  Need some ideas for good Linux aliases?  Check here.
+### 15) Aliases
 
+Aliases are appended to the end of the /etc/bash.bashrc file, so that all Bash shells have them avaiable.
+
+I added an Alias for the Class Gateway SSH command:
 `alias gateway = "ssh -p53997 azl0502@129.244.245.21"`
