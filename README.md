@@ -2,4 +2,4 @@
 
 Austin Lively, University of Tulsa
 
-(Arch Linux Install)[arch.md]
+[Arch Linux Install](./arch.md)
