@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-# logo: relativepathtopng
+logo: ./logo.jpg
 title: Austin Lively
 description: |
   He/Him/His
