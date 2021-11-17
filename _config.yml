@@ -1,4 +1,9 @@
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
+
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+color-scheme: dark # ["dark", "light", "auto" or "auto-deafualt-dark" auto is deafault setting and changes theme based on device theme, auto-deafualt-dark is the same except if you device does not support changing theme based on device theme it will deafault to dark and the others are fairly explanetory.]
 logo: Logo.png
 title: Austin Lively
 description: |
