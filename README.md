@@ -18,6 +18,8 @@ Hi! My name is Austin Lively, and I'm a Computer Science and Electrical/Computer
 
 [Trapezoidal Rule Estimation using pThreads](./TrapRulepThread.md)
 
+[Stochastic Nearest Neighbor Heuristic for Traveling Salesman Problem](./SNNTSP.md)
+
 ## Cool References I've found
 
 [RookieHPC](https://www.rookiehpc.com/)
