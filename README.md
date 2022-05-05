@@ -10,6 +10,14 @@ Hi! My name is Austin Lively, and I'm a Computer Science and Electrical/Computer
 
 [Docker Lab: Wireguard](./wireguard.md)
 
+## High Performance Computing Projects
+
+[Monte Carlo Simulation for Calculating Pi using MPI](./MonteCarloPiMPI.md)
+
+[Parallel Sort using MPI](./ParallelSortMPI.md)
+
+[Trapezoidal Rule Estimation using pThreads](./TrapRulepThread.md)
+
 ## Cool References I've found
 
 [RookieHPC](https://www.rookiehpc.com/)
