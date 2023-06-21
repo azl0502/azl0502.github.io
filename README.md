@@ -26,6 +26,4 @@ Hi! My name is Austin Lively, and I'm a Computer Science and Electrical/Computer
 
 ## Cool References I've found
 
-[RookieHPC](https://www.rookiehpc.com/)
-
 [OSINT Framework](https://osintframework.com/)
