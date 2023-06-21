@@ -20,6 +20,10 @@ Hi! My name is Austin Lively, and I'm a Computer Science and Electrical/Computer
 
 [Stochastic Nearest Neighbor Heuristic for Traveling Salesman Problem](./SNNTSP.md)
 
+## Miscellaneous Adventures
+
+[ATG Exploration](./ATG_Exploration.md)
+
 ## Cool References I've found
 
 [RookieHPC](https://www.rookiehpc.com/)
